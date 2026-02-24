@@ -204,3 +204,56 @@
 
 <Profile name="Tony" />
 ```
+
+### พยายามผูกค่า Props โดยไม่ใช้ $bindable()
+Profile.svelte
+```Svelte
+<script>
+	let { name } = $props();
+
+	function changeName() {
+		name = "Somchai"
+	}
+</script>
+
+<p>Child name value: {name}</p>
+<button onclick={changeName}>เปลี่ยนชื่อเป็น Somchai</button>
+```
+App.svelte
+```Svelte
+<script>
+	import Profile from "./Profile.svelte";
+
+	let currentName = $state("Somsak");
+</script>
+
+<p>Parent name value: {name}</p>
+<Profile name={currentName} />
+```
+
+### ผูกค่า Props โดยใช้ $bindable()
+Profile.svelte
+```Svelte
+<script>
+	let { name= $bindable() } = $props();
+
+	function changeName() {
+		name = "Somchai"
+	}
+</script>
+
+<p>Child name value: {name}</p>
+<button onclick={changeName}>เปลี่ยนชื่อเป็น Somchai</button>
+```
+App.svelte
+```Svelte
+<script>
+	import Profile from "./Profile.svelte";
+
+	let currentName = $state("Somsak");
+</script>
+
+<p>Parent name value: {name}</p>
+<Profile bind:name={currentName} />
+```
+
