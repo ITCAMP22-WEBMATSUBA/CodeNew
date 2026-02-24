@@ -12,15 +12,15 @@
 <input type="number" bind:value={score} min="0" max="100" />
 
 {#if score >= 80}
-  <p>Grade: A 🏆</p>
+  <p>Grade: A </p>
 {:else if score >= 70}
-  <p>Grade: B 👍</p>
+  <p>Grade: B </p>
 {:else if score >= 60}
-  <p>Grade: C 🙂</p>
+  <p>Grade: C </p>
 {:else if score >= 50}
-  <p>Grade: D 😬</p>
+  <p>Grade: D </p>
 {:else}
-  <p>Grade: F 💀</p>
+  <p>Grade: F </p>
 {/if}
 ```
 
