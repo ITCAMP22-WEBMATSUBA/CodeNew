@@ -116,7 +116,7 @@
 ### value
 ```Svelte
 <script>
-  let username = $state("Camper IT Camp22");
+  let username = $state("Camper ITCAMP22");
 </script>
 
 <div class="box">
@@ -178,7 +178,7 @@
 <Navbar />
 <Navbar />
 
-<h1>Welcome to IT camp22</h1>
+<h1>Welcome to IT CAMP22</h1>
 ```
 
 ## Props
