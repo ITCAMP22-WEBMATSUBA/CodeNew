@@ -178,7 +178,7 @@
 <Navbar />
 <Navbar />
 
-<h1>Welcome to IT CAMP22</h1>
+<h1>Welcome to ITCAMP22</h1>
 ```
 
 ## Props
